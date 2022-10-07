@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B028EED2F10019793E /* AppDelegate.swift */; };
+		F645B4B328EED2F10019793E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B228EED2F10019793E /* SceneDelegate.swift */; };
+		F645B4B528EED2F10019793E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B428EED2F10019793E /* MainViewController.swift */; };
+		F645B4BB28EED2F10019793E /* MEMENTO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B928EED2F10019793E /* MEMENTO.xcdatamodeld */; };
+		F645B4BD28EED2F20019793E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F645B4BC28EED2F20019793E /* Assets.xcassets */; };
+		F645B4C028EED2F20019793E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F645B4BE28EED2F20019793E /* LaunchScreen.storyboard */; };
+		F645B4CE28EED4BC0019793E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4CD28EED4BC0019793E /* Coordinator.swift */; };
+		F645B4D028EED54E0019793E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4CF28EED54E0019793E /* MainCoordinator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F645B4AD28EED2F10019793E /* MEMENTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEMENTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F645B4B028EED2F10019793E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F645B4B228EED2F10019793E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F645B4B428EED2F10019793E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F645B4BA28EED2F10019793E /* MEMENTO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MEMENTO.xcdatamodel; sourceTree = "<group>"; };
+		F645B4BC28EED2F20019793E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F645B4BF28EED2F20019793E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F645B4C128EED2F20019793E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F645B4CD28EED4BC0019793E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F645B4CF28EED54E0019793E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F645B4AA28EED2F10019793E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F645B4A428EED2F10019793E = {
+			isa = PBXGroup;
+			children = (
+				F645B4AF28EED2F10019793E /* MEMENTO */,
+				F645B4AE28EED2F10019793E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F645B4AE28EED2F10019793E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F645B4AD28EED2F10019793E /* MEMENTO.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F645B4AF28EED2F10019793E /* MEMENTO */ = {
+			isa = PBXGroup;
+			children = (
+				F645B4CC28EED44E0019793E /* Resource */,
+				F645B4CB28EED4400019793E /* Flow */,
+				F645B4CA28EED3350019793E /* Domain */,
+				F645B4C928EED32B0019793E /* Presentation */,
+				F645B4C828EED3230019793E /* Data */,
+				F645B4C128EED2F20019793E /* Info.plist */,
+				F645B4B928EED2F10019793E /* MEMENTO.xcdatamodeld */,
+			);
+			path = MEMENTO;
+			sourceTree = "<group>";
+		};
+		F645B4C828EED3230019793E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F645B4C928EED32B0019793E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F645B4D128EED7450019793E /* Main */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F645B4CA28EED3350019793E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F645B4CB28EED4400019793E /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				F645B4CD28EED4BC0019793E /* Coordinator.swift */,
+				F645B4CF28EED54E0019793E /* MainCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		F645B4CC28EED44E0019793E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F645B4B028EED2F10019793E /* AppDelegate.swift */,
+				F645B4B228EED2F10019793E /* SceneDelegate.swift */,
+				F645B4BC28EED2F20019793E /* Assets.xcassets */,
+				F645B4BE28EED2F20019793E /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F645B4D128EED7450019793E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F645B4B428EED2F10019793E /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F645B4AC28EED2F10019793E /* MEMENTO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F645B4C428EED2F20019793E /* Build configuration list for PBXNativeTarget "MEMENTO" */;
+			buildPhases = (
+				F645B4A928EED2F10019793E /* Sources */,
+				F645B4AA28EED2F10019793E /* Frameworks */,
+				F645B4AB28EED2F10019793E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MEMENTO;
+			productName = MEMENTO;
+			productReference = F645B4AD28EED2F10019793E /* MEMENTO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F645B4A528EED2F10019793E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					F645B4AC28EED2F10019793E = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = F645B4A828EED2F10019793E /* Build configuration list for PBXProject "MEMENTO" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F645B4A428EED2F10019793E;
+			productRefGroup = F645B4AE28EED2F10019793E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F645B4AC28EED2F10019793E /* MEMENTO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F645B4AB28EED2F10019793E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F645B4C028EED2F20019793E /* LaunchScreen.storyboard in Resources */,
+				F645B4BD28EED2F20019793E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F645B4A928EED2F10019793E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F645B4B528EED2F10019793E /* MainViewController.swift in Sources */,
+				F645B4D028EED54E0019793E /* MainCoordinator.swift in Sources */,
+				F645B4BB28EED2F10019793E /* MEMENTO.xcdatamodeld in Sources */,
+				F645B4CE28EED4BC0019793E /* Coordinator.swift in Sources */,
+				F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */,
+				F645B4B328EED2F10019793E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F645B4BE28EED2F20019793E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F645B4BF28EED2F20019793E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F645B4C228EED2F20019793E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F645B4C328EED2F20019793E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F645B4C528EED2F20019793E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XM6U38MLW4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MEMENTO/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = susan.MEMENTO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F645B4C628EED2F20019793E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XM6U38MLW4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MEMENTO/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = susan.MEMENTO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F645B4A828EED2F10019793E /* Build configuration list for PBXProject "MEMENTO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F645B4C228EED2F20019793E /* Debug */,
+				F645B4C328EED2F20019793E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F645B4C428EED2F20019793E /* Build configuration list for PBXNativeTarget "MEMENTO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F645B4C528EED2F20019793E /* Debug */,
+				F645B4C628EED2F20019793E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F645B4B928EED2F10019793E /* MEMENTO.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F645B4BA28EED2F10019793E /* MEMENTO.xcdatamodel */,
+			);
+			currentVersion = F645B4BA28EED2F10019793E /* MEMENTO.xcdatamodel */;
+			path = MEMENTO.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F645B4A528EED2F10019793E /* Project object */;
+}
