@@ -1,29 +1,59 @@
 
 import UIKit
+import Combine
 
 class MainViewController: UIViewController{
-    let typingPlaceholder = "typing to remember"
-    var sendTextView = SendTextView()
+    let viewModel: MainViewModel
+    var subscriber: Set<AnyCancellable> = .init()
+    
+    var answerExpanded = ExpandingContentCell()
+    
+    let contentsTableView = ContentListView()
+    let sendTextView = SendTextView()
+    let loadingView = LoadingView()
+    
+    init(viewModel: MainViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        loadingView.drawLoadingView(view: view)
         configureUI()
     }
     
     func setup() {
+        setupNavHeader()
         setupKeyboardHiding()
+        bind()
     }
     
     func configureUI() {
         view.backgroundColor = .white
-        drawMain()
 
+        view.addSubview(contentsTableView)
+        contentsTableView.translatesAutoresizingMaskIntoConstraints = false
+        contentsTableView.tableView.delegate = self
+        contentsTableView.tableView.dataSource = self
+        
+        NSLayoutConstraint.activate([
+            contentsTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 16),
+            contentsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            contentsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            contentsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+
+        
         view.addSubview(sendTextView)
         sendTextView.translatesAutoresizingMaskIntoConstraints = false
-        
-        sendTextView.isUserInteractionEnabled = true
-         
+        sendTextView.textView.delegate = self
+        sendTextView.button.addTarget(self, action: #selector(SendButtonClicked), for: .touchUpInside)
         NSLayoutConstraint.activate([
             sendTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             sendTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -31,15 +61,65 @@ class MainViewController: UIViewController{
             sendTextView.heightAnchor.constraint(equalToConstant: 48 * 2)
         ])
 
-        sendTextView.button.addTarget(self, action: #selector(click), for: .touchUpInside)
-    }
-    @objc func click() {
-        print("cl")
     }
     
-    // MARK: 다른 곳 터치시 editor 종료 시점 알리기 -> 키보드 내리기 등에서 사용가능 할 듯
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+    func setupNavHeader() {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = UIColor(red: 0.983, green: 0.983, blue: 0.983, alpha: 1)
+        appearance.titleTextAttributes = [.foregroundColor: UIColor(red: 0.198, green: 0.202, blue: 0.233, alpha: 1)]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.shadowColor = .clear
+        
+        
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+        
+        title = "MEMENTO"
+        let filterButton = UIBarButtonItem(image: UIImage(systemName: "slider.vertical.3"), style: .plain, target: self, action: #selector(NavButtonClicked))
+        
+        let menuButton = UIBarButtonItem(image: UIImage(systemName: "text.justify"), style: .plain, target: self, action: #selector(NavButtonClicked))
+        
+        filterButton.tintColor = .black
+        menuButton.tintColor = .black
+        
+        self.navigationItem.rightBarButtonItems = [menuButton, filterButton]
+    }
+
+    func bind() {
+        viewModel.fetchContents()
+    
+        viewModel.$loading.sink { loading in
+            self.loadingView.isHidden = !loading
+            
+            if loading == false {
+                self.configureUI()
+                self.contentsTableView.tableView.reloadData()
+            }
+
+            print(loading)
+        }.store(in: &subscriber)
+        
+        viewModel.$contents.sink{ contents in
+            print(contents)
+        }.store(in: &subscriber)
+    }
+    
+    
+    // MARK: Button Click Event
+    @objc func NavButtonClicked() {
+        print("nav btn clicked")
+        answerExpanded.expended = true
+        contentsTableView.tableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .automatic)
+    }
+    @objc func SendButtonClicked() {
+        let newText = sendTextView.textView.text
+//        viewModel.createMockContents(text: newText ?? "")
+        viewModel.createContents(content: newText ?? "")
+        self.contentsTableView.tableView.reloadData()
+        self.contentsTableView.tableView.scrollToBottom()
     }
 }
 
@@ -55,65 +135,3 @@ extension MainViewController {
         text.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
-
-
-extension MainViewController {
-    // MARK: Keyboard show and hide problem with NotificatinCentr
-    // https://www.youtube.com/watch?v=O4tP7egAV1I&ab_channel=SwiftArcade
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        print("hide")
-        view.frame.origin.y = 0
-    }
-    
-    @objc func keyboardWillShow(sender: NSNotification) {
-        
-        guard let userInfo = sender.userInfo,
-              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
-              let currentTextField = UIResponder.currentFirst() as? UITextView else { return }
-        
-        let keyboardTopY = keyboardFrame.cgRectValue.origin.y
-        let convertedTextFieldFrame = view.convert(currentTextField.frame, from: currentTextField.superview)
-        let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
-        
-        if textFieldBottomY > keyboardTopY {
-            let textBoxY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
-            let newFrameY = (textBoxY - keyboardTopY + 14) * -1
-            view.frame.origin.y = newFrameY
-        }
-        
-        print("called")
-        
-    }
-    
-    func setupKeyboardHiding() {
-        print("keyboard setup done")
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-}
-
-// MARK: SendTextView PlaceHold Helper
-extension MainViewController: UITextViewDelegate {
-
-    func textViewDidBeginEditing(_ textView: UITextView) {
-
-        if textView.text == sendTextView.typingPlaceholder {
-            textView.text = nil
-            textView.textColor = .black
-        }
-    }
-
-    func textViewDidEndEditing(_ textView: UITextView) {
-        print("end")
-
-        // setup placeholder
-        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            textView.text = sendTextView.typingPlaceholder
-            textView.textColor = .gray
-        }
-    }
-}
-
-

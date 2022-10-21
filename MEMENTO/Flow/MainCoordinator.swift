@@ -2,11 +2,11 @@
 import UIKit
 
 class MainCoordinator: Coordinator {
-    var nvc: UINavigationController?
+    var navigationController: UINavigationController?
     
     func start() {
-        let rootViewController = MainViewController()
-        
-        nvc?.setViewControllers([rootViewController], animated: true)
+        let viewModel = MainViewModel()
+        let rootViewController = MainViewController(viewModel: viewModel)
+        navigationController?.setViewControllers([rootViewController], animated: true)
     }
 }

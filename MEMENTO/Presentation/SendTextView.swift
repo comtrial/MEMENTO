@@ -9,7 +9,7 @@ import UIKit
 
 class SendTextView: UIView {
     
-    let typingPlaceholder = "typing to remember"
+    let typingPlaceholder = "기억해야할 기록들을 남겨보세요"
     
     var textView = UITextView()
     var button = UIButton()
@@ -30,36 +30,34 @@ class SendTextView: UIView {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.text = typingPlaceholder
         
-        textView.font = UIFont.systemFont(ofSize: 18)
-        textView.textColor = .gray
-        textView.layer.borderWidth = 0.8
-        textView.layer.borderColor = UIColor.lightGray.cgColor
+        textView.font = UIFont.systemFont(ofSize: 16)
+        textView.textColor = UIColor(red: 0.198, green: 0.202, blue: 0.233, alpha: 0.38)
+        textView.layer.backgroundColor = UIColor(red: 0.961, green: 0.961, blue: 0.961, alpha: 1).cgColor
         textView.layer.cornerRadius = 8
-        textView.textContainerInset = UIEdgeInsets(top: 14,left: 14,bottom: 14,right: 14)
-        
+        textView.textContainerInset = UIEdgeInsets(top: 12, left: 10, bottom: 12, right: 10)
         NSLayoutConstraint.activate([
             textView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -48),
-            textView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
-            textView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
-            textView.heightAnchor.constraint(equalToConstant: 48),
+            textView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            textView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
+            textView.heightAnchor.constraint(equalToConstant: 40),
         ])
         
         // MARK: button Config
         addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
         
-        let buttonConfiguration = UIImage.SymbolConfiguration(pointSize: 18, weight: .bold)
+        let buttonConfiguration = UIImage.SymbolConfiguration(pointSize: 14, weight: .bold)
         let buttonUIImage = UIImage(systemName: "arrow.right", withConfiguration: buttonConfiguration)?.withTintColor(.white, renderingMode: .alwaysOriginal)
         
         button.setImage(buttonUIImage, for: .normal)
-        button.backgroundColor = .systemBlue
-        button.layer.cornerRadius = 20
+        button.backgroundColor = .lightGray
+        button.layer.cornerRadius = 8
         
         NSLayoutConstraint.activate([
             button.centerYAnchor.constraint(equalTo: textView.centerYAnchor),
             button.trailingAnchor.constraint(equalTo: textView.trailingAnchor, constant: -4),
-            button.widthAnchor.constraint(equalToConstant: 40),
-            button.heightAnchor.constraint(equalToConstant: 40),
+            button.widthAnchor.constraint(equalToConstant: 30),
+            button.heightAnchor.constraint(equalToConstant: 30),
         ])
     }
 }

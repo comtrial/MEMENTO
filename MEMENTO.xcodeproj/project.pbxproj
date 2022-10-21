@@ -17,6 +17,19 @@
 		F645B4CE28EED4BC0019793E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4CD28EED4BC0019793E /* Coordinator.swift */; };
 		F645B4D028EED54E0019793E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4CF28EED54E0019793E /* MainCoordinator.swift */; };
 		F660B95828F3D05F00A39753 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F660B95728F3D05F00A39753 /* UIResponder+Extension.swift */; };
+		F69AB87F28FFFD0100C533FF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AB87E28FFFD0100C533FF /* UIColor+Extension.swift */; };
+		F69AB8812901188900C533FF /* keyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AB8802901188900C533FF /* keyboardExtension.swift */; };
+		F69AB88429011B9200C533FF /* ContentList+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AB88329011B9200C533FF /* ContentList+TableView.swift */; };
+		F69AB88629011BD100C533FF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AB88529011BD100C533FF /* MainViewModel.swift */; };
+		F69AB88829011D8E00C533FF /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AB88729011D8E00C533FF /* ContentListView.swift */; };
+		F69AB88A29011EA100C533FF /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AB88929011EA100C533FF /* ContentCell.swift */; };
+		F69AB88C29011EF700C533FF /* ContentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AB88B29011EF700C533FF /* ContentEntity.swift */; };
+		F69AB88F2901247B00C533FF /* ContentMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69AB88E2901247B00C533FF /* ContentMockData.swift */; };
+		F69DF5AA29024F6200777D11 /* ContentOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5A929024F6200777D11 /* ContentOptionView.swift */; };
+		F69DF5B12902E15900777D11 /* ContentData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5AF2902E15900777D11 /* ContentData+CoreDataClass.swift */; };
+		F69DF5B22902E15900777D11 /* ContentData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5B02902E15900777D11 /* ContentData+CoreDataProperties.swift */; };
+		F69DF5B52902E1D400777D11 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5B42902E1D400777D11 /* Repository.swift */; };
+		F69DF5B82902EBFD00777D11 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5B72902EBFD00777D11 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +45,19 @@
 		F645B4CD28EED4BC0019793E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F645B4CF28EED54E0019793E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F660B95728F3D05F00A39753 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
+		F69AB87E28FFFD0100C533FF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		F69AB8802901188900C533FF /* keyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardExtension.swift; sourceTree = "<group>"; };
+		F69AB88329011B9200C533FF /* ContentList+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentList+TableView.swift"; sourceTree = "<group>"; };
+		F69AB88529011BD100C533FF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		F69AB88729011D8E00C533FF /* ContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListView.swift; sourceTree = "<group>"; };
+		F69AB88929011EA100C533FF /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		F69AB88B29011EF700C533FF /* ContentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentEntity.swift; path = MEMENTO/Presentation/Main/View/ContentEntity.swift; sourceTree = SOURCE_ROOT; };
+		F69AB88E2901247B00C533FF /* ContentMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMockData.swift; sourceTree = "<group>"; };
+		F69DF5A929024F6200777D11 /* ContentOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentOptionView.swift; sourceTree = "<group>"; };
+		F69DF5AF2902E15900777D11 /* ContentData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F69DF5B02902E15900777D11 /* ContentData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F69DF5B42902E1D400777D11 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		F69DF5B72902EBFD00777D11 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +90,7 @@
 		F645B4AF28EED2F10019793E /* MEMENTO */ = {
 			isa = PBXGroup;
 			children = (
+				F69AB87D28FFFCED00C533FF /* Extension */,
 				F645B4CC28EED44E0019793E /* Resource */,
 				F645B4CB28EED4400019793E /* Flow */,
 				F645B4CA28EED3350019793E /* Domain */,
@@ -71,7 +98,6 @@
 				F645B4C828EED3230019793E /* Data */,
 				F645B4C128EED2F20019793E /* Info.plist */,
 				F645B4B928EED2F10019793E /* MEMENTO.xcdatamodeld */,
-				F660B95728F3D05F00A39753 /* UIResponder+Extension.swift */,
 			);
 			path = MEMENTO;
 			sourceTree = "<group>";
@@ -79,6 +105,9 @@
 		F645B4C828EED3230019793E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F69DF5B32902E1A800777D11 /* Entity */,
+				F69AB88D2901246A00C533FF /* MockData */,
+				F69DF5B42902E1D400777D11 /* Repository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -86,6 +115,7 @@
 		F645B4C928EED32B0019793E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F69DF5B62902EBEF00777D11 /* Component */,
 				F645B4D128EED7450019793E /* Main */,
 				F63C707228F561230061A720 /* SendTextView.swift */,
 			);
@@ -95,6 +125,7 @@
 		F645B4CA28EED3350019793E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F69AB88B29011EF700C533FF /* ContentEntity.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -122,9 +153,57 @@
 		F645B4D128EED7450019793E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F69AB88229011A9000C533FF /* View */,
 				F645B4B428EED2F10019793E /* MainViewController.swift */,
+				F69AB88529011BD100C533FF /* MainViewModel.swift */,
+				F69AB8802901188900C533FF /* keyboardExtension.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		F69AB87D28FFFCED00C533FF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F660B95728F3D05F00A39753 /* UIResponder+Extension.swift */,
+				F69AB87E28FFFD0100C533FF /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F69AB88229011A9000C533FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F69AB88329011B9200C533FF /* ContentList+TableView.swift */,
+				F69AB88729011D8E00C533FF /* ContentListView.swift */,
+				F69AB88929011EA100C533FF /* ContentCell.swift */,
+				F69DF5A929024F6200777D11 /* ContentOptionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F69AB88D2901246A00C533FF /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				F69AB88E2901247B00C533FF /* ContentMockData.swift */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		F69DF5B32902E1A800777D11 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F69DF5AF2902E15900777D11 /* ContentData+CoreDataClass.swift */,
+				F69DF5B02902E15900777D11 /* ContentData+CoreDataProperties.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F69DF5B62902EBEF00777D11 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F69DF5B72902EBFD00777D11 /* LoadingView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,13 +277,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				F645B4B528EED2F10019793E /* MainViewController.swift in Sources */,
+				F69AB88C29011EF700C533FF /* ContentEntity.swift in Sources */,
+				F69AB88A29011EA100C533FF /* ContentCell.swift in Sources */,
 				F660B95828F3D05F00A39753 /* UIResponder+Extension.swift in Sources */,
+				F69AB88429011B9200C533FF /* ContentList+TableView.swift in Sources */,
+				F69DF5B82902EBFD00777D11 /* LoadingView.swift in Sources */,
+				F69AB88829011D8E00C533FF /* ContentListView.swift in Sources */,
 				F645B4D028EED54E0019793E /* MainCoordinator.swift in Sources */,
+				F69DF5B52902E1D400777D11 /* Repository.swift in Sources */,
+				F69AB87F28FFFD0100C533FF /* UIColor+Extension.swift in Sources */,
 				F645B4BB28EED2F10019793E /* MEMENTO.xcdatamodeld in Sources */,
+				F69DF5B12902E15900777D11 /* ContentData+CoreDataClass.swift in Sources */,
 				F645B4CE28EED4BC0019793E /* Coordinator.swift in Sources */,
 				F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */,
+				F69DF5B22902E15900777D11 /* ContentData+CoreDataProperties.swift in Sources */,
 				F645B4B328EED2F10019793E /* SceneDelegate.swift in Sources */,
+				F69AB8812901188900C533FF /* keyboardExtension.swift in Sources */,
 				F63C707328F561230061A720 /* SendTextView.swift in Sources */,
+				F69DF5AA29024F6200777D11 /* ContentOptionView.swift in Sources */,
+				F69AB88629011BD100C533FF /* MainViewModel.swift in Sources */,
+				F69AB88F2901247B00C533FF /* ContentMockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

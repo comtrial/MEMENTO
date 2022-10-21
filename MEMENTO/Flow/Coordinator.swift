@@ -2,7 +2,7 @@
 import UIKit
 
 protocol Coordinator {
-    var nvc: UINavigationController? { get set }
+    var navigationController: UINavigationController? { get set }
     
     func start()
 }
