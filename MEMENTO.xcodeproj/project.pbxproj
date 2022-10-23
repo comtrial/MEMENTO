@@ -30,6 +30,8 @@
 		F69DF5B22902E15900777D11 /* ContentData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5B02902E15900777D11 /* ContentData+CoreDataProperties.swift */; };
 		F69DF5B52902E1D400777D11 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5B42902E1D400777D11 /* Repository.swift */; };
 		F69DF5B82902EBFD00777D11 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5B72902EBFD00777D11 /* LoadingView.swift */; };
+		F69DF5BA29052E1F00777D11 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5B929052E1E00777D11 /* UIButton+Extension.swift */; };
+		F69DF5BD2905309100777D11 /* MainViewController+OptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5BC2905309100777D11 /* MainViewController+OptButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		F69DF5B02902E15900777D11 /* ContentData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F69DF5B42902E1D400777D11 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F69DF5B72902EBFD00777D11 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F69DF5B929052E1E00777D11 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		F69DF5BC2905309100777D11 /* MainViewController+OptButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+OptButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,6 @@
 		F645B4C828EED3230019793E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F69DF5B32902E1A800777D11 /* Entity */,
 				F69AB88D2901246A00C533FF /* MockData */,
 				F69DF5B42902E1D400777D11 /* Repository.swift */,
 			);
@@ -125,6 +128,7 @@
 		F645B4CA28EED3350019793E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F69DF5B32902E1A800777D11 /* Entity */,
 				F69AB88B29011EF700C533FF /* ContentEntity.swift */,
 			);
 			path = Domain;
@@ -153,10 +157,9 @@
 		F645B4D128EED7450019793E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F69DF5BB2905304900777D11 /* ViewController */,
 				F69AB88229011A9000C533FF /* View */,
-				F645B4B428EED2F10019793E /* MainViewController.swift */,
 				F69AB88529011BD100C533FF /* MainViewModel.swift */,
-				F69AB8802901188900C533FF /* keyboardExtension.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			children = (
 				F660B95728F3D05F00A39753 /* UIResponder+Extension.swift */,
 				F69AB87E28FFFD0100C533FF /* UIColor+Extension.swift */,
+				F69DF5B929052E1E00777D11 /* UIButton+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -204,6 +208,16 @@
 				F69DF5B72902EBFD00777D11 /* LoadingView.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		F69DF5BB2905304900777D11 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F69AB8802901188900C533FF /* keyboardExtension.swift */,
+				F645B4B428EED2F10019793E /* MainViewController.swift */,
+				F69DF5BC2905309100777D11 /* MainViewController+OptButton.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +293,7 @@
 				F645B4B528EED2F10019793E /* MainViewController.swift in Sources */,
 				F69AB88C29011EF700C533FF /* ContentEntity.swift in Sources */,
 				F69AB88A29011EA100C533FF /* ContentCell.swift in Sources */,
+				F69DF5BA29052E1F00777D11 /* UIButton+Extension.swift in Sources */,
 				F660B95828F3D05F00A39753 /* UIResponder+Extension.swift in Sources */,
 				F69AB88429011B9200C533FF /* ContentList+TableView.swift in Sources */,
 				F69DF5B82902EBFD00777D11 /* LoadingView.swift in Sources */,
@@ -288,6 +303,7 @@
 				F69AB87F28FFFD0100C533FF /* UIColor+Extension.swift in Sources */,
 				F645B4BB28EED2F10019793E /* MEMENTO.xcdatamodeld in Sources */,
 				F69DF5B12902E15900777D11 /* ContentData+CoreDataClass.swift in Sources */,
+				F69DF5BD2905309100777D11 /* MainViewController+OptButton.swift in Sources */,
 				F645B4CE28EED4BC0019793E /* Coordinator.swift in Sources */,
 				F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */,
 				F69DF5B22902E15900777D11 /* ContentData+CoreDataProperties.swift in Sources */,

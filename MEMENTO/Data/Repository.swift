@@ -50,7 +50,6 @@ final class ContentRepository {
             Future  { promise in
                 context?.perform {
                     if let entity = NSEntityDescription.entity(forEntityName: self.modelName, in: context!) {
-                        
                         if let contentData = NSManagedObject(entity: entity, insertInto: context) as? ContentData {
                             contentData.content = content
                             contentData.date = Date()
@@ -64,13 +63,42 @@ final class ContentRepository {
                                 }
                             }
                         }
-                        
-                        
                     }
+                }
+            }
+        }
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
+    }
+    
+    func deleteContentData(contentIdx: Int) -> AnyPublisher<[ContentData], Error> {
+        Deferred { [context] in
+            Future { promise in
+                context?.perform {
+                    
+//                    
+//                    let request = NSFetchRequest<NSManagedObject> (entityName:self.modelName)
+//                    let dataOrder = NSSortDescriptor(key: "date", ascending: false)
+//                    request.sortDescriptors = [dataOrder]
+//                    
+//                    do {
+//                        if let fetchedContents = try context?.fetch(request) as! [ContentData] {
+//                            if let targetContentData = fetchedContents.first {
+//                                context?.delete(targetContentData)
+//                            }
+//                        }
+//                        context?.save()
+//                        promise(.success(fetchedContents))
+//                    } catch {
+//                        promise(.failure(error))
+//                    }
+//                    
+                    
                     
                 }
             }
         }
+        .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
 }

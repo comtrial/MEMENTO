@@ -69,8 +69,4 @@ extension MainViewController: UITableViewDataSource {
     }
 }
 
-extension MainViewController: OptButtonDelegate {
-    func didTapButton() {
-        print("opt")
-    }
-}
+
