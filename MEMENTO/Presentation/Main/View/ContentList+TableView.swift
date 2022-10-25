@@ -51,14 +51,16 @@ extension MainViewController: UITableViewDataSource {
         return cell
     }
     
+    //TODO: Delete flow definitely need refact
+    // MARK: Delete row flows
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .normal, title: nil) { (action, view, completion) in
-            
+            self.viewModel.deleteContent(contentData: self.viewModel.contents[indexPath[1]])
             self.viewModel.contents.remove(at: indexPath[1])
             tableView.deleteRows(at: [indexPath], with: .automatic)
             completion(true)
         }
-        print(indexPath[1])
+        
         action.backgroundColor = .white
         action.image = UIImage(systemName: "trash")
         action.backgroundColor = .darkGray

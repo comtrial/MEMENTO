@@ -16,11 +16,17 @@ class MainViewModel {
     @Published var contentMocks: [Content] = []
     @Published var contents: [ContentData] = []
     
+    // MARK: Mock flows
     func fetchMockContents() {
         let contents = ContentMockData.mockData
         print(contents)
         self.contentMocks = contents
         return
+    }
+    
+    func createMockContents(text: String) {
+        let newContent = Content(text: text)
+        contentMocks.append(newContent)
     }
     
     func fetchContents() {
@@ -34,11 +40,10 @@ class MainViewModel {
         } receiveValue: { contents in
             self.contents = contents
             self.loading = false
-            print(contents)
         }.store(in: &subscriber)
     }
     
-    //TODO: 데이터 생성 후 flow 다듬어야해
+    //TODO: 데이터 생성 후 flows 다듬어야해
     func createContents(content: String) {
         repository.createContentData(content: content).sink{ completion in
             switch completion {
@@ -55,8 +60,20 @@ class MainViewModel {
         }.store(in: &subscriber)
     }
     
-    func createMockContents(text: String) {
-        let newContent = Content(text: text)
-        contentMocks.append(newContent)
+    func deleteContent(contentData: ContentData) {
+        repository.deleteContentData(id: contentData.objectID).sink{ completion in
+            switch completion {
+            case .failure(let error):
+                print("err \(error)")
+                debugPrint("an error occurred \(error.localizedDescription)")
+            case .finished:
+                break
+            }
+
+        } receiveValue: { contentData in
+            print(contentData)
+            self.loading = false
+        }.store(in: &subscriber)
+
     }
 }

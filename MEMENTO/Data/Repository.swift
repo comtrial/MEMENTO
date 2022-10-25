@@ -71,16 +71,29 @@ final class ContentRepository {
         .eraseToAnyPublisher()
     }
     
-    func deleteContentData(contentIdx: Int) -> AnyPublisher<[ContentData], Error> {
+    func deleteContentData(id: NSManagedObjectID) -> AnyPublisher<ContentData, Error> {
         Deferred { [context] in
             Future { promise in
                 context?.perform {
                     
-//                    
+                    do {
+                        if let targetContent = try context?.existingObject(with: id) as? ContentData {
+                            context?.delete(targetContent)
+                            try context?.save()
+                            print(targetContent)
+                            print("조회 성공")
+                            promise(.success(targetContent))
+                        }
+
+                    } catch {
+                        print("실패")
+                        promise(.failure(error))
+                    }
+
 //                    let request = NSFetchRequest<NSManagedObject> (entityName:self.modelName)
 //                    let dataOrder = NSSortDescriptor(key: "date", ascending: false)
 //                    request.sortDescriptors = [dataOrder]
-//                    
+//
 //                    do {
 //                        if let fetchedContents = try context?.fetch(request) as! [ContentData] {
 //                            if let targetContentData = fetchedContents.first {
@@ -92,7 +105,7 @@ final class ContentRepository {
 //                    } catch {
 //                        promise(.failure(error))
 //                    }
-//                    
+//
                     
                     
                 }

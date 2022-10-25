@@ -102,9 +102,9 @@ class MainViewController: UIViewController{
             print(loading)
         }.store(in: &subscriber)
         
-        viewModel.$contents.sink{ contents in
-            print(contents)
-        }.store(in: &subscriber)
+//        viewModel.$contents.sink{ contents in
+//            print(contents)
+//        }.store(in: &subscriber)
     }
     
     
