@@ -41,7 +41,6 @@ extension MainViewController {
         let sendTextViewHeight = self.sendTextView.frame.height
         self.sendTextView.frame.origin.y = view.frame.height - sendTextViewHeight
         
-//        self.contentsTableView.frame.origin.y = 0
     }
     
     @objc func keyboardWillShow(sender: NSNotification) {

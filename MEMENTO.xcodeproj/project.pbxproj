@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F63C707328F561230061A720 /* SendTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C707228F561230061A720 /* SendTextView.swift */; };
+		F63C707328F561230061A720 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C707228F561230061A720 /* SendView.swift */; };
 		F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B028EED2F10019793E /* AppDelegate.swift */; };
 		F645B4B328EED2F10019793E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B228EED2F10019793E /* SceneDelegate.swift */; };
 		F645B4B528EED2F10019793E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B428EED2F10019793E /* MainViewController.swift */; };
@@ -32,10 +32,15 @@
 		F69DF5B82902EBFD00777D11 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5B72902EBFD00777D11 /* LoadingView.swift */; };
 		F69DF5BA29052E1F00777D11 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5B929052E1E00777D11 /* UIButton+Extension.swift */; };
 		F69DF5BD2905309100777D11 /* MainViewController+OptButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5BC2905309100777D11 /* MainViewController+OptButton.swift */; };
+		F69DF5C12909112100777D11 /* MainViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5C02909112100777D11 /* MainViewModel+Mock.swift */; };
+		F69DF5C42909184000777D11 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5C32909184000777D11 /* Alert.swift */; };
+		F69DF5C629091DA900777D11 /* ContentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5C529091DA900777D11 /* ContentNotification.swift */; };
+		F6B24137290A4ADC00C3224A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24136290A4ADC00C3224A /* UILabel.swift */; };
+		F6B24139290A576200C3224A /* List+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24138290A576200C3224A /* List+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F63C707228F561230061A720 /* SendTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTextView.swift; sourceTree = "<group>"; };
+		F63C707228F561230061A720 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
 		F645B4AD28EED2F10019793E /* MEMENTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEMENTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F645B4B028EED2F10019793E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F645B4B228EED2F10019793E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +67,11 @@
 		F69DF5B72902EBFD00777D11 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F69DF5B929052E1E00777D11 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		F69DF5BC2905309100777D11 /* MainViewController+OptButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+OptButton.swift"; sourceTree = "<group>"; };
+		F69DF5C02909112100777D11 /* MainViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel+Mock.swift"; sourceTree = "<group>"; };
+		F69DF5C32909184000777D11 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F69DF5C529091DA900777D11 /* ContentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentNotification.swift; sourceTree = "<group>"; };
+		F6B24136290A4ADC00C3224A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		F6B24138290A576200C3224A /* List+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,7 @@
 		F645B4AF28EED2F10019793E /* MEMENTO */ = {
 			isa = PBXGroup;
 			children = (
+				F69DF5C22909183400777D11 /* Constant */,
 				F69AB87D28FFFCED00C533FF /* Extension */,
 				F645B4CC28EED44E0019793E /* Resource */,
 				F645B4CB28EED4400019793E /* Flow */,
@@ -120,7 +131,7 @@
 			children = (
 				F69DF5B62902EBEF00777D11 /* Component */,
 				F645B4D128EED7450019793E /* Main */,
-				F63C707228F561230061A720 /* SendTextView.swift */,
+				F63C707228F561230061A720 /* SendView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -130,6 +141,7 @@
 			children = (
 				F69DF5B32902E1A800777D11 /* Entity */,
 				F69AB88B29011EF700C533FF /* ContentEntity.swift */,
+				F69DF5C529091DA900777D11 /* ContentNotification.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -160,6 +172,7 @@
 				F69DF5BB2905304900777D11 /* ViewController */,
 				F69AB88229011A9000C533FF /* View */,
 				F69AB88529011BD100C533FF /* MainViewModel.swift */,
+				F69DF5C02909112100777D11 /* MainViewModel+Mock.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -170,6 +183,7 @@
 				F660B95728F3D05F00A39753 /* UIResponder+Extension.swift */,
 				F69AB87E28FFFD0100C533FF /* UIColor+Extension.swift */,
 				F69DF5B929052E1E00777D11 /* UIButton+Extension.swift */,
+				F6B24138290A576200C3224A /* List+Extention.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -218,6 +232,15 @@
 				F69DF5BC2905309100777D11 /* MainViewController+OptButton.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F69DF5C22909183400777D11 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				F69DF5C32909184000777D11 /* Alert.swift */,
+				F6B24136290A4ADC00C3224A /* UILabel.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,15 +313,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69DF5C12909112100777D11 /* MainViewModel+Mock.swift in Sources */,
 				F645B4B528EED2F10019793E /* MainViewController.swift in Sources */,
 				F69AB88C29011EF700C533FF /* ContentEntity.swift in Sources */,
 				F69AB88A29011EA100C533FF /* ContentCell.swift in Sources */,
+				F6B24137290A4ADC00C3224A /* UILabel.swift in Sources */,
 				F69DF5BA29052E1F00777D11 /* UIButton+Extension.swift in Sources */,
 				F660B95828F3D05F00A39753 /* UIResponder+Extension.swift in Sources */,
 				F69AB88429011B9200C533FF /* ContentList+TableView.swift in Sources */,
+				F69DF5C629091DA900777D11 /* ContentNotification.swift in Sources */,
 				F69DF5B82902EBFD00777D11 /* LoadingView.swift in Sources */,
 				F69AB88829011D8E00C533FF /* ContentListView.swift in Sources */,
 				F645B4D028EED54E0019793E /* MainCoordinator.swift in Sources */,
+				F6B24139290A576200C3224A /* List+Extention.swift in Sources */,
 				F69DF5B52902E1D400777D11 /* Repository.swift in Sources */,
 				F69AB87F28FFFD0100C533FF /* UIColor+Extension.swift in Sources */,
 				F645B4BB28EED2F10019793E /* MEMENTO.xcdatamodeld in Sources */,
@@ -306,10 +333,11 @@
 				F69DF5BD2905309100777D11 /* MainViewController+OptButton.swift in Sources */,
 				F645B4CE28EED4BC0019793E /* Coordinator.swift in Sources */,
 				F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */,
+				F69DF5C42909184000777D11 /* Alert.swift in Sources */,
 				F69DF5B22902E15900777D11 /* ContentData+CoreDataProperties.swift in Sources */,
 				F645B4B328EED2F10019793E /* SceneDelegate.swift in Sources */,
 				F69AB8812901188900C533FF /* keyboardExtension.swift in Sources */,
-				F63C707328F561230061A720 /* SendTextView.swift in Sources */,
+				F63C707328F561230061A720 /* SendView.swift in Sources */,
 				F69DF5AA29024F6200777D11 /* ContentOptionView.swift in Sources */,
 				F69AB88629011BD100C533FF /* MainViewModel.swift in Sources */,
 				F69AB88F2901247B00C533FF /* ContentMockData.swift in Sources */,

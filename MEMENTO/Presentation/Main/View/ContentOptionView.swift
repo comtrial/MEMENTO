@@ -10,10 +10,12 @@ import UIKit
 
 class ContentOptionView: UIView{
     
-    let notiButton = UIButton()
-    let tagButton = UIButton()
+    var notiButton = UIButton()
+    var tagButton = UIButton()
     
     override init(frame: CGRect) {
+//        self.notiButton = notiButton
+//        self.tagButton = tagButton
         super.init(frame: frame)
         configureUI()
     }
