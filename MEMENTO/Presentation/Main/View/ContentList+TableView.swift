@@ -34,36 +34,7 @@ extension MainViewController: UITableViewDelegate {
         self.contentsTableView.tableView.reloadRows(at: [indexPath], with: .automatic)
         print(indexPath)
         print(viewModel.contentStates)
-        
-        //        print("when click cell content \(viewModel.contents[indexPath.row])")
-        //        print("when click cell statste \(viewModel.contentStates[indexPath.row])")
-        //        let content = answerExpanded
-        //        content.expended = !content.expended
-        
-        //        print("is Cell index: \(indexPath)")
-        //        print("is Cell expanded: \(content.expended)")
-        
-//        let targetIndices = viewModel.contentStates.indices.filter{ viewModel.contentStates[$0] == true }
-//        print("fucking new \(targetIndices)")
-//
-//        if targetIndices != [] {
-//            for targetIndex in targetIndices {
-//                if targetIndex != indexPath.row {
-//                    viewModel.contentStates[targetIndex] = false
-//                    let reloadIndexPath = IndexPath(row: targetIndex, section: 0)
-//                    self.contentsTableView.tableView.reloadRows(at: [reloadIndexPath], with: .automatic)
-//                    print("target index \(targetIndex)")
-//                }
-//            }
-//        }
-        
-       
-
-        
-        
-
-
-        
+      
     }
 }
 
@@ -78,7 +49,8 @@ extension MainViewController: UITableViewDataSource {
         
         print("cell redraw index \(indexPath.row)")
         let itemStatus = viewModel.contentStates[indexPath.row]
-        cell.configureUI(item: item, isExpanded: answerExpanded, isOpen: itemStatus)
+        cell.configureUI(item: item, isOpen: itemStatus)
+        
         cell.selectionStyle = .none
         cell.delegate = self
         

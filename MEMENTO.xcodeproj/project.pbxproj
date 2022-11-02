@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F63C707328F561230061A720 /* SendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C707228F561230061A720 /* SendView.swift */; };
+		F63C707328F561230061A720 /* SendTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C707228F561230061A720 /* SendTextView.swift */; };
 		F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B028EED2F10019793E /* AppDelegate.swift */; };
 		F645B4B328EED2F10019793E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B228EED2F10019793E /* SceneDelegate.swift */; };
 		F645B4B528EED2F10019793E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B428EED2F10019793E /* MainViewController.swift */; };
@@ -37,10 +37,12 @@
 		F69DF5C629091DA900777D11 /* ContentNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF5C529091DA900777D11 /* ContentNotification.swift */; };
 		F6B24137290A4ADC00C3224A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24136290A4ADC00C3224A /* UILabel.swift */; };
 		F6B24139290A576200C3224A /* List+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B24138290A576200C3224A /* List+Extention.swift */; };
+		F6B2413B290BBD3B00C3224A /* SendTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B2413A290BBD3B00C3224A /* SendTagView.swift */; };
+		F6B2416D291209F200C3224A /* MainViewController+TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B2416C291209F200C3224A /* MainViewController+TagButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F63C707228F561230061A720 /* SendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendView.swift; sourceTree = "<group>"; };
+		F63C707228F561230061A720 /* SendTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTextView.swift; sourceTree = "<group>"; };
 		F645B4AD28EED2F10019793E /* MEMENTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEMENTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F645B4B028EED2F10019793E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F645B4B228EED2F10019793E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		F69DF5C529091DA900777D11 /* ContentNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentNotification.swift; sourceTree = "<group>"; };
 		F6B24136290A4ADC00C3224A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		F6B24138290A576200C3224A /* List+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Extention.swift"; sourceTree = "<group>"; };
+		F6B2413A290BBD3B00C3224A /* SendTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTagView.swift; sourceTree = "<group>"; };
+		F6B2416C291209F200C3224A /* MainViewController+TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TagButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +135,8 @@
 			children = (
 				F69DF5B62902EBEF00777D11 /* Component */,
 				F645B4D128EED7450019793E /* Main */,
-				F63C707228F561230061A720 /* SendView.swift */,
+				F63C707228F561230061A720 /* SendTextView.swift */,
+				F6B2413A290BBD3B00C3224A /* SendTagView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				F69AB8802901188900C533FF /* keyboardExtension.swift */,
 				F645B4B428EED2F10019793E /* MainViewController.swift */,
 				F69DF5BC2905309100777D11 /* MainViewController+OptButton.swift */,
+				F6B2416C291209F200C3224A /* MainViewController+TagButton.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			files = (
 				F69DF5C12909112100777D11 /* MainViewModel+Mock.swift in Sources */,
 				F645B4B528EED2F10019793E /* MainViewController.swift in Sources */,
+				F6B2416D291209F200C3224A /* MainViewController+TagButton.swift in Sources */,
 				F69AB88C29011EF700C533FF /* ContentEntity.swift in Sources */,
 				F69AB88A29011EA100C533FF /* ContentCell.swift in Sources */,
 				F6B24137290A4ADC00C3224A /* UILabel.swift in Sources */,
@@ -328,6 +335,7 @@
 				F6B24139290A576200C3224A /* List+Extention.swift in Sources */,
 				F69DF5B52902E1D400777D11 /* Repository.swift in Sources */,
 				F69AB87F28FFFD0100C533FF /* UIColor+Extension.swift in Sources */,
+				F6B2413B290BBD3B00C3224A /* SendTagView.swift in Sources */,
 				F645B4BB28EED2F10019793E /* MEMENTO.xcdatamodeld in Sources */,
 				F69DF5B12902E15900777D11 /* ContentData+CoreDataClass.swift in Sources */,
 				F69DF5BD2905309100777D11 /* MainViewController+OptButton.swift in Sources */,
@@ -337,7 +345,7 @@
 				F69DF5B22902E15900777D11 /* ContentData+CoreDataProperties.swift in Sources */,
 				F645B4B328EED2F10019793E /* SceneDelegate.swift in Sources */,
 				F69AB8812901188900C533FF /* keyboardExtension.swift in Sources */,
-				F63C707328F561230061A720 /* SendView.swift in Sources */,
+				F63C707328F561230061A720 /* SendTextView.swift in Sources */,
 				F69DF5AA29024F6200777D11 /* ContentOptionView.swift in Sources */,
 				F69AB88629011BD100C533FF /* MainViewModel.swift in Sources */,
 				F69AB88F2901247B00C533FF /* ContentMockData.swift in Sources */,

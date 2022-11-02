@@ -6,13 +6,13 @@
 //
 import UIKit
 
-class ExpandingContentCell {
-    var expended: Bool
-    
-    init() {
-        self.expended = false
-    }
-}
+//class ExpandingContentCell {
+//    var expended: Bool
+//
+//    init() {
+//        self.expended = false
+//    }
+//}
 
 protocol OptButtonDelegate: AnyObject {
     func didTapNotiButton(item: ContentData)
@@ -44,7 +44,7 @@ class ContentCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureUI(item: ContentData, isExpanded: ExpandingContentCell, isOpen: Bool = false) {
+    func configureUI(item: ContentData, isOpen: Bool = false) {
         self.backgroundColor = .white
         
         self.item = item

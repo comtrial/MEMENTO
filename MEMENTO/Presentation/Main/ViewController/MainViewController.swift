@@ -9,8 +9,6 @@ class MainViewController: UIViewController{
     let viewModel: MainViewModel
     var subscriber: Set<AnyCancellable> = .init()
     
-    var answerExpanded = ExpandingContentCell()
-    
     let contentsTableView = ContentListView()
     
     var sendTextView = SendTextView()
@@ -45,17 +43,17 @@ class MainViewController: UIViewController{
     // MARK: 사용자에게 알림 권한 요처
     func requestAutNoti() {
         let notiAuthOptions = UNAuthorizationOptions(arrayLiteral: [.alert, .badge, .sound])
-
+        
         userNotiCenter.requestAuthorization(options: notiAuthOptions) { (success, err) in
             if let err = err {
                 print(#function, err)
             }
         }
     }
-
+    
     func configureUI() {
         view.backgroundColor = .white
-
+        
         view.addSubview(contentsTableView)
         contentsTableView.translatesAutoresizingMaskIntoConstraints = false
         contentsTableView.tableView.delegate = self
@@ -67,7 +65,7 @@ class MainViewController: UIViewController{
             contentsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             contentsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
         ])
-
+        
         setupSendTextView()
     }
     
@@ -109,22 +107,28 @@ class MainViewController: UIViewController{
             ])
         } else {
             sendTextView.removeFromSuperview()
+            print("here")
+            print(self.sendTagView.contentTags)
             view.addSubview(sendTagView)
+            //            sendTagView.contentTags = viewModel.contentTags
+            //            print(sendTagView.contentTags)
+            sendTagView.configureUI()
             sendTagView.translatesAutoresizingMaskIntoConstraints = false
+            sendTagView.delegate = self
             sendTagView.textView.delegate = self
-            sendTagView.button.addTarget(self, action: #selector(SendTagButtonClicked), for: .touchUpInside)
+            
             NSLayoutConstraint.activate([
                 sendTagView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
                 sendTagView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
                 sendTagView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                sendTagView.heightAnchor.constraint(equalToConstant: 48 * 2)
+                sendTagView.heightAnchor.constraint(equalToConstant: 48 * 4)
             ])
             print("메롱")
         }
     }
     func bind() {
         viewModel.fetchContents()
-    
+        
         viewModel.$loading.sink { loading in
             self.loadingView.isHidden = !loading
             if loading == false {
@@ -146,14 +150,14 @@ class MainViewController: UIViewController{
             self.sendTagView = SendTagView()
             self.sendTagView.contentTags = contentTags
         }.store(in: &subscriber)
-
+        
     }
     
     
     // MARK: Button Click Event
     @objc func NavButtonClicked() {
         print("nav btn clicked")
-        answerExpanded.expended = true
+//        answerExpanded.expended = true
         contentsTableView.tableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .automatic)
     }
     @objc func SendTextButtonClicked() {
@@ -164,6 +168,11 @@ class MainViewController: UIViewController{
     }
     
     @objc func SendTagButtonClicked() {
+        let newText = sendTagView.textView.text
+        viewModel.updateContentTag(tag: newText ?? "")
+    }
+    
+    @objc func tagButtonClicked(_ sender: UIButton) {
         let newText = sendTagView.textView.text
         viewModel.updateContentTag(tag: newText ?? "")
     }
