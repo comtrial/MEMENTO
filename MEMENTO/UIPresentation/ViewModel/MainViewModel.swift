@@ -2,27 +2,43 @@
 //  MainViewModel.swift
 //  MEMENTO
 //
-//  Created by 최승원 on 2022/10/20.
-//
+//  Created by 최승원 on 2022/11/10.
 
-import Foundation
+import UIKit
+import SwiftUI
 import Combine
 import UserNotifications
 
-class MainViewModel {
+class MainViewModel: ObservableObject {
     //TODO: Definitely need to divide Notification flow
     let userNotiCenter = UNUserNotificationCenter.current()
     let repository = ContentRepository.shared
     var subscriber: Set<AnyCancellable> = .init()
     
+    // MARK: SwiftUI migration
+    @Published var contents: [ContentData] = []
     var contentDataFocused: ContentData?
+    var dateTime: Date?
+    
+    // Typing View Property
+    @Published var completedTyping: String = ""
+    let tagPlaceHolder = ""
+    
+    
+  
+
     
     @Published var loading: Bool = true
     @Published var tagEditStatus: Bool = false
-    @Published var contentMocks: [Content] = []
-    @Published var contents: [ContentData] = []
+//    @Published var contentMocks: [Content] = []
     @Published var contentStates: [Bool] = []
     @Published var contentTags: [String] = []
+    
+    init() {
+        self.fetchContents()
+        print("개씨발")
+        print(contents)
+    }
     
     func toggleTagStatus() {
         self.tagEditStatus = !self.tagEditStatus
@@ -30,6 +46,7 @@ class MainViewModel {
     }
     
     func fetchContents() {
+        print("fetch called")
         repository.fetchContentDataPublisher().sink { completion in
             switch completion  {
             case .failure(let error):
@@ -38,7 +55,11 @@ class MainViewModel {
                 break
             }
         } receiveValue: { contents in
+            print("개씨발  receive 까지도 된건데")
+            print(contents)
             self.contents = contents
+            self.dateTime = contents.first?.date
+            
             self.setContentStates()
             self.getTags(contents: contents)
             self.loading = false
@@ -57,8 +78,42 @@ class MainViewModel {
             }
         } receiveValue: { contentData in
             print(contentData)
-            self.contents.append(contentData)
-            self.contentStates.append(true)
+            self.contents.insert(contentData, at: 0)
+//            self.contentStates.append(true)
+            self.loading = false
+        }.store(in: &subscriber)
+    }
+    
+    func createImageContent(imageContent: UIImage) {
+        repository.createImageContentData(imageContent: imageContent).sink{ completion in
+            switch completion {
+            case .failure(let error):
+                print("err \(error)")
+                debugPrint("an error occurred \(error.localizedDescription)")
+            case .finished:
+                break
+            }
+        } receiveValue: { contentData in
+            print(contentData)
+            self.contents.insert(contentData, at: 0)
+//            self.contentStates.append(false)
+            self.loading = false
+        }.store(in: &subscriber)
+    }
+    
+    func createURLContent(url: String) {
+        repository.createURLContentData(url: url).sink{ completion in
+            switch completion {
+            case .failure(let error):
+                print("err \(error)")
+                debugPrint("an error occurred \(error.localizedDescription)")
+            case .finished:
+                break
+            }
+        } receiveValue: { contentData in
+            print(contentData)
+            self.contents.insert(contentData, at: 0)
+//            self.contentStates.append(true)
             self.loading = false
         }.store(in: &subscriber)
     }
@@ -79,7 +134,7 @@ class MainViewModel {
         }.store(in: &subscriber)
     }
     
-    func updateContentNoti(contentData: ContentData, notiDuration: Double) {
+    func updateContentNoti(contentData: ContentData, notiDuration: Double?) {
         repository.updateContentNoti(id: contentData.objectID, notiDuration: "noti duration test").sink{ completion in
             switch completion {
             case .failure(let error):
@@ -114,14 +169,15 @@ class MainViewModel {
 }
 
 extension MainViewModel {
-    func registerContentNoti(item: ContentData, notiDuration: Double) {
+    func registerContentNoti(item: ContentData, notiDuration: Double?) {
+        //TODO: add noti cancel process
         let notiContent = UNMutableNotificationContent()
 
         notiContent.title = "메멘토 알림"
         notiContent.body = item.content! + "\(notiDuration) 을 곁들인.."
         notiContent.userInfo = ["targetScene": "splash"] // 푸시 받을때 오는 데이터
         print(notiDuration)
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: notiDuration, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: notiDuration!, repeats: false)
 
         let request = UNNotificationRequest(
             identifier: UUID().uuidString,

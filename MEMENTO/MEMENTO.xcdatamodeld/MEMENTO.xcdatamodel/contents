@@ -3,6 +3,7 @@
     <entity name="ContentData" representedClassName="ContentData" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="notiTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="tag" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="String"/>

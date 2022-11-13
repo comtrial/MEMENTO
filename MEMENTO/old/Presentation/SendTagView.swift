@@ -50,7 +50,7 @@ class SendTagView: UIView {
         // MARK: button Config
         addSubview(sendButton)
         sendButton.translatesAutoresizingMaskIntoConstraints = false
-        
+        sendButton.addTarget(self, action: #selector(tagSendClicked), for: .touchDown)
         sendButton.setTitle("태그입력", for: .normal)
 
         sendButton.backgroundColor = .lightGray
@@ -90,10 +90,10 @@ class SendTagView: UIView {
         }
     }
     
-//    @objc func tagButtonClicked(_ sender: UIButton) {
-//        print("tag click")
-//        print(sender.titleLabel?.text)
-//    }
+    @objc func tagSendClicked(_ sender: UIButton) {
+        self.delegate?.didTapTagButton(newTag: self.textView.text!)
+    }
+    
     @objc func tagButtonClicked(_ sender: UIButton) {
         print("tag click")
         self.delegate?.didTapTagButton(newTag: sender.titleLabel?.text ?? "")

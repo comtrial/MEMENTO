@@ -26,7 +26,7 @@ final class ContentRepository {
             Future { promise in
                 context?.perform {
                     let request = NSFetchRequest<NSManagedObject> (entityName:self.modelName)
-                    let dataOrder = NSSortDescriptor(key: "date", ascending: true)
+                    let dataOrder = NSSortDescriptor(key: "date", ascending: false)
                     request.sortDescriptors = [dataOrder]
                     
                     do {
@@ -51,6 +51,7 @@ final class ContentRepository {
                 context?.perform {
                     if let entity = NSEntityDescription.entity(forEntityName: self.modelName, in: context!) {
                         if let contentData = NSManagedObject(entity: entity, insertInto: context) as? ContentData {
+                            contentData.type = "text"
                             contentData.content = content
                             contentData.date = Date()
                             
@@ -70,6 +71,66 @@ final class ContentRepository {
         .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
+    
+    func createImageContentData(imageContent: UIImage) -> AnyPublisher<ContentData, Error> {
+        Deferred { [context] in
+            Future  { promise in
+                context?.perform {
+                    if let entity = NSEntityDescription.entity(forEntityName: self.modelName, in: context!) {
+                        if let contentData = NSManagedObject(entity: entity, insertInto: context) as? ContentData {
+                            
+                            contentData.type = "image"
+                            contentData.content = "image test"
+                            contentData.image = imageContent.jpegData(compressionQuality: 1.0)
+                            contentData.date = Date()
+                            
+                            if context!.hasChanges {
+                                do {
+                                    try context!.save()
+                                    promise(.success(contentData))
+                                } catch {
+                                    promise(.failure(error))
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
+    }
+    
+    
+    
+    func createURLContentData(url: String) -> AnyPublisher<ContentData, Error> {
+        Deferred { [context] in
+            Future  { promise in
+                context?.perform {
+                    if let entity = NSEntityDescription.entity(forEntityName: self.modelName, in: context!) {
+                        if let contentData = NSManagedObject(entity: entity, insertInto: context) as? ContentData {
+                            
+                            contentData.type = "url"
+                            contentData.content = url
+                            contentData.date = Date()
+                            
+                            if context!.hasChanges {
+                                do {
+                                    try context!.save()
+                                    promise(.success(contentData))
+                                } catch {
+                                    promise(.failure(error))
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .receive(on: DispatchQueue.main)
+        .eraseToAnyPublisher()
+    }
+    
     
     func deleteContentData(id: NSManagedObjectID) -> AnyPublisher<ContentData, Error> {
         Deferred { [context] in

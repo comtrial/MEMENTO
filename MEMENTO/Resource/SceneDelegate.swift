@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,12 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        let navigationController = UINavigationController()
-        let mainCoordinator = MainCoordinator()
-        mainCoordinator.navigationController = navigationController
-        mainCoordinator.start()
+        // MARK: SwiftUI migration
+        let mainViewController = UIHostingController(rootView: MainView())
+//        
+//        
         
-        window?.rootViewController = navigationController
+        
+//        let mainViewController = UINavigationController()
+//        let mainCoordinator = MainCoordinator()
+//        mainCoordinator.navigationController = mainViewController
+//        mainCoordinator.start()
+        
+        window?.rootViewController = mainViewController
         window?.makeKeyAndVisible()
     }
 
