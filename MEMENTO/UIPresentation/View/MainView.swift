@@ -13,7 +13,7 @@ struct MainView: View {
     @State var openPhotoPicker = false
     @State var image = UIImage()
     @State var openAlarmPicker = false
-    
+    //github 연동 테스트
     var body: some View {
         NavigationView {
             
