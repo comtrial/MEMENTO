@@ -15,9 +15,11 @@ struct MainView: View {
     @State var openPhotoPicker = false
     @State var image = UIImage()
     @State var openAlarmPicker = false
+    
+   
     var body: some View {
         NavigationView {
-            
+        
             VStack{
                 GeometryReader { reader in
                     ScrollView {
@@ -58,7 +60,7 @@ struct MainView: View {
                         HStack() {
                             Text("MEMENTO")
 //                                .font(.headline)
-                                .font(.system(size: 20, weight: .semibold))
+                                .font(.custom("Pretendard-ExtraLight", size: 20 ))
                             Spacer()
                             
                             HStack(alignment: .lastTextBaseline){

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F466AFD8292360C000ADA7CB /* Pretendard-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFD7292360C000ADA7CB /* Pretendard-Medium.ttf */; };
+		F466AFDC292360CE00ADA7CB /* Pretendard-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFD9292360CD00ADA7CB /* Pretendard-Thin.ttf */; };
+		F466AFDD292360CE00ADA7CB /* Pretendard-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFDA292360CE00ADA7CB /* Pretendard-Regular.ttf */; };
+		F466AFDE292360CE00ADA7CB /* Pretendard-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFDB292360CE00ADA7CB /* Pretendard-SemiBold.ttf */; };
+		F466AFE4292360D800ADA7CB /* Pretendard-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFDF292360D700ADA7CB /* Pretendard-Black.ttf */; };
+		F466AFE5292360D800ADA7CB /* Pretendard-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFE0292360D700ADA7CB /* Pretendard-Bold.ttf */; };
+		F466AFE6292360D800ADA7CB /* Pretendard-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFE1292360D700ADA7CB /* Pretendard-ExtraLight.ttf */; };
+		F466AFE7292360D800ADA7CB /* Pretendard-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFE2292360D700ADA7CB /* Pretendard-Light.ttf */; };
+		F466AFE8292360D800ADA7CB /* Pretendard-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFE3292360D800ADA7CB /* Pretendard-ExtraBold.ttf */; };
 		F4AF5B252923471400C043ED /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = F4AF5B242923471400C043ED /* Inject */; };
 		F63C707328F561230061A720 /* SendTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C707228F561230061A720 /* SendTextView.swift */; };
 		F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B028EED2F10019793E /* AppDelegate.swift */; };
@@ -52,6 +61,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F466AFD7292360C000ADA7CB /* Pretendard-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.ttf"; sourceTree = "<group>"; };
+		F466AFD9292360CD00ADA7CB /* Pretendard-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.ttf"; sourceTree = "<group>"; };
+		F466AFDA292360CE00ADA7CB /* Pretendard-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.ttf"; sourceTree = "<group>"; };
+		F466AFDB292360CE00ADA7CB /* Pretendard-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.ttf"; sourceTree = "<group>"; };
+		F466AFDF292360D700ADA7CB /* Pretendard-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.ttf"; sourceTree = "<group>"; };
+		F466AFE0292360D700ADA7CB /* Pretendard-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.ttf"; sourceTree = "<group>"; };
+		F466AFE1292360D700ADA7CB /* Pretendard-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F466AFE2292360D700ADA7CB /* Pretendard-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.ttf"; sourceTree = "<group>"; };
+		F466AFE3292360D800ADA7CB /* Pretendard-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.ttf"; sourceTree = "<group>"; };
 		F63C707228F561230061A720 /* SendTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTextView.swift; sourceTree = "<group>"; };
 		F645B4AD28EED2F10019793E /* MEMENTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEMENTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F645B4B028EED2F10019793E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +127,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F466AFD62923604C00ADA7CB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F466AFDF292360D700ADA7CB /* Pretendard-Black.ttf */,
+				F466AFE0292360D700ADA7CB /* Pretendard-Bold.ttf */,
+				F466AFE3292360D800ADA7CB /* Pretendard-ExtraBold.ttf */,
+				F466AFE1292360D700ADA7CB /* Pretendard-ExtraLight.ttf */,
+				F466AFE2292360D700ADA7CB /* Pretendard-Light.ttf */,
+				F466AFDA292360CE00ADA7CB /* Pretendard-Regular.ttf */,
+				F466AFDB292360CE00ADA7CB /* Pretendard-SemiBold.ttf */,
+				F466AFD9292360CD00ADA7CB /* Pretendard-Thin.ttf */,
+				F466AFD7292360C000ADA7CB /* Pretendard-Medium.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		F645B4A428EED2F10019793E = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +162,7 @@
 		F645B4AF28EED2F10019793E /* MEMENTO */ = {
 			isa = PBXGroup;
 			children = (
+				F466AFD62923604C00ADA7CB /* Font */,
 				F6AF4997291CE9FC009A52A3 /* UIPresentation */,
 				F69DF5C22909183400777D11 /* Constant */,
 				F69AB87D28FFFCED00C533FF /* Extension */,
@@ -374,8 +409,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F466AFE4292360D800ADA7CB /* Pretendard-Black.ttf in Resources */,
+				F466AFDE292360CE00ADA7CB /* Pretendard-SemiBold.ttf in Resources */,
+				F466AFE8292360D800ADA7CB /* Pretendard-ExtraBold.ttf in Resources */,
+				F466AFDC292360CE00ADA7CB /* Pretendard-Thin.ttf in Resources */,
 				F645B4C028EED2F20019793E /* LaunchScreen.storyboard in Resources */,
+				F466AFDD292360CE00ADA7CB /* Pretendard-Regular.ttf in Resources */,
 				F645B4BD28EED2F20019793E /* Assets.xcassets in Resources */,
+				F466AFE6292360D800ADA7CB /* Pretendard-ExtraLight.ttf in Resources */,
+				F466AFE5292360D800ADA7CB /* Pretendard-Bold.ttf in Resources */,
+				F466AFE7292360D800ADA7CB /* Pretendard-Light.ttf in Resources */,
+				F466AFD8292360C000ADA7CB /* Pretendard-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
