@@ -6,14 +6,15 @@
 
 
 import SwiftUI
+import Inject
 
 struct MainView: View {
+    @ObservedObject private var iO = Inject.observer
     @StateObject var viewModel = MainViewModel()
     
     @State var openPhotoPicker = false
     @State var image = UIImage()
     @State var openAlarmPicker = false
-    //github 연동 테스트
     var body: some View {
         NavigationView {
             
@@ -61,11 +62,11 @@ struct MainView: View {
                             Spacer()
                             
                             HStack(alignment: .lastTextBaseline){
-                                Button(action: { print("dd")}) {
+                                Button(action: { print("filter button click")}) {
                                     Image(systemName: "slider.vertical.3")
                                         .foregroundColor(.black)
                                     }
-                                Button(action: { print("dd")}) {
+                                Button(action: { print("setting button click")}) {
                                     Image(systemName: "gearshape")
                                         .foregroundColor(.black)
                                     }
@@ -77,7 +78,7 @@ struct MainView: View {
                 
             
             
-        }
+        }.enableInjection()
     }
         
 }

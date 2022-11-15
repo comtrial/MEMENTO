@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4AF5B252923471400C043ED /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = F4AF5B242923471400C043ED /* Inject */; };
 		F63C707328F561230061A720 /* SendTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C707228F561230061A720 /* SendTextView.swift */; };
 		F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B028EED2F10019793E /* AppDelegate.swift */; };
 		F645B4B328EED2F10019793E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B228EED2F10019793E /* SceneDelegate.swift */; };
@@ -101,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4AF5B252923471400C043ED /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +326,9 @@
 			dependencies = (
 			);
 			name = MEMENTO;
+			packageProductDependencies = (
+				F4AF5B242923471400C043ED /* Inject */,
+			);
 			productName = MEMENTO;
 			productReference = F645B4AD28EED2F10019793E /* MEMENTO.app */;
 			productType = "com.apple.product-type.application";
@@ -352,6 +357,9 @@
 				Base,
 			);
 			mainGroup = F645B4A428EED2F10019793E;
+			packageReferences = (
+				F4AF5B232923471400C043ED /* XCRemoteSwiftPackageReference "Inject" */,
+			);
 			productRefGroup = F645B4AE28EED2F10019793E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -488,6 +496,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
+					"-Xlinker",
+					"-interposable",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -555,7 +567,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XM6U38MLW4;
+				DEVELOPMENT_TEAM = L6572RT5WV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MEMENTO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -582,7 +594,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XM6U38MLW4;
+				DEVELOPMENT_TEAM = L6572RT5WV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MEMENTO/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -624,6 +636,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4AF5B232923471400C043ED /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4AF5B242923471400C043ED /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4AF5B232923471400C043ED /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F645B4B928EED2F10019793E /* MEMENTO.xcdatamodeld */ = {

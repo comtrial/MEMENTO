@@ -68,7 +68,7 @@ extension MainView {
 extension MainView {
     var typingContentView: some View {
         HStack {
-            TextField("기억해야할 기록들을 남겨보세요", text: $viewModel.completedTyping)
+            TextField("어떤 기록을 남기시나요?", text: $viewModel.completedTyping)
                 .font(.system(size: 15))
                 .padding()
             
