@@ -16,6 +16,7 @@
 		F466AFE6292360D800ADA7CB /* Pretendard-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFE1292360D700ADA7CB /* Pretendard-ExtraLight.ttf */; };
 		F466AFE7292360D800ADA7CB /* Pretendard-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFE2292360D700ADA7CB /* Pretendard-Light.ttf */; };
 		F466AFE8292360D800ADA7CB /* Pretendard-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F466AFE3292360D800ADA7CB /* Pretendard-ExtraBold.ttf */; };
+		F466AFEA2923652F00ADA7CB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F466AFE92923652F00ADA7CB /* Colors.xcassets */; };
 		F4AF5B252923471400C043ED /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = F4AF5B242923471400C043ED /* Inject */; };
 		F63C707328F561230061A720 /* SendTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63C707228F561230061A720 /* SendTextView.swift */; };
 		F645B4B128EED2F10019793E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F645B4B028EED2F10019793E /* AppDelegate.swift */; };
@@ -70,6 +71,7 @@
 		F466AFE1292360D700ADA7CB /* Pretendard-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.ttf"; sourceTree = "<group>"; };
 		F466AFE2292360D700ADA7CB /* Pretendard-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.ttf"; sourceTree = "<group>"; };
 		F466AFE3292360D800ADA7CB /* Pretendard-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F466AFE92923652F00ADA7CB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F63C707228F561230061A720 /* SendTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTextView.swift; sourceTree = "<group>"; };
 		F645B4AD28EED2F10019793E /* MEMENTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEMENTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F645B4B028EED2F10019793E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		F645B4AF28EED2F10019793E /* MEMENTO */ = {
 			isa = PBXGroup;
 			children = (
+				F466AFE92923652F00ADA7CB /* Colors.xcassets */,
 				F466AFD62923604C00ADA7CB /* Font */,
 				F6AF4997291CE9FC009A52A3 /* UIPresentation */,
 				F69DF5C22909183400777D11 /* Constant */,
@@ -418,6 +421,7 @@
 				F645B4BD28EED2F20019793E /* Assets.xcassets in Resources */,
 				F466AFE6292360D800ADA7CB /* Pretendard-ExtraLight.ttf in Resources */,
 				F466AFE5292360D800ADA7CB /* Pretendard-Bold.ttf in Resources */,
+				F466AFEA2923652F00ADA7CB /* Colors.xcassets in Resources */,
 				F466AFE7292360D800ADA7CB /* Pretendard-Light.ttf in Resources */,
 				F466AFD8292360C000ADA7CB /* Pretendard-Medium.ttf in Resources */,
 			);
