@@ -63,14 +63,14 @@ struct MainView: View {
                                 .font(.custom("Pretendard-ExtraLight", size: 20 ))
                             Spacer()
                             
-                            HStack(alignment: .lastTextBaseline){
+                            HStack(alignment: .center){
                                 Button(action: { print("filter button click")}) {
-                                    Image(systemName: "slider.vertical.3")
-                                        .foregroundColor(.black)
+                                    Image("filter_icon")
+                                    
+                                        
                                     }
                                 Button(action: { print("setting button click")}) {
-                                    Image(systemName: "gearshape")
-                                        .foregroundColor(.black)
+                                    Image("setting_icon")
                                     }
                             }
                             

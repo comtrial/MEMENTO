@@ -77,8 +77,7 @@ extension MainView {
                     Button(action: {
                         self.openPhotoPicker = true
                     }){
-                        Image(systemName: "photo")
-                            .foregroundColor(.black)
+                        Image("camera_icon")
                     }
                     .sheet(isPresented: $openPhotoPicker) {
                         ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image, viewModel: viewModel)
@@ -86,16 +85,15 @@ extension MainView {
                     .padding(4)
                     
                     Button(action: {}){
-                        Image(systemName: "camera")
-                            .foregroundColor(.black)
+                        Image("gallery_icon")
+                            
                     }
                     .padding(4)
                     
                     Button(action: {
                         didTapClipBoardButton()
                     }){
-                        Image(systemName: "doc.on.doc")
-                            .foregroundColor(.black)
+                        Image("clipborad_icon")
                     }
                     .padding(4)
                 }
